@@ -1,13 +1,116 @@
----
-layout: default
-title: Your New Jekyll Site
----
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chad Minick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif">
+    <!-- Main.css -->
+    <link rel="stylesheet" href="assets/css/main.css">
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <header>
+                <h1 id="brand">Chad Minick</h1>
+                <div id="sub-brand">Software Developer</div>
+            </header>
+        </div>
+        <nav class="col-md-4 col-sm-12 col-xs-12" id="main-nav">
+            <ul class="nav nav-pills">
+                <li><a href="/">Home</a></li>
+                <li><a href="/archive.html">Archive</a></li>
+                <li><a class="sicons sicon-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter" href="https://twitter.com/cythrawll">Twitter</a></li>
+                <li><a class="sicons sicon-github" data-toggle="tooltip" data-placement="bottom" title="Github" href="https://github.com/cythrawll/">Github</a></li>
+                <li><a class="sicons sicon-linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn" href="https://www.linkedin.com/in/cythrawll">LinkedIn</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="row" id="info-row">
+        <div class="col-md-4">
+            <h2>Software Developer</h2>
+            <p>I develop software for large scale public applications. APIs, load balancers, token based login systems, logging services, work queues, and more. I consider myself a comfortable in multiple computer languages and platforms.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Operations</h2>
+            <p>I have experience in setting up and configuring web servers, and supporting services (Cache services, load balancers, proxies, database servers, job servers, and logging servers) in multiple platforms: Linux, Windows and Mac OSX. I also have the ability to set up processes for testing, building, and deployment to large scale systems.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Developer</h2>
+            <p>I have been passionate about doing web development ever since I was a teenager. I can develop large scale web applications and web sites.  Including complex javascript UIs, with dynamic and real time data.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 index-article-col">
+            <h2>News &amp; Articles</h2>
+
+            <h3><a href="">Article 1</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed molestie mauris, eu tristique libero.
+                Nunc hendrerit lacinia hendrerit. Donec luctus ultrices turpis sed eleifend.
+            <br><a href="">Read More ...</a></p>
+            <div class="art-summary">September 23, 2013 06:00 pm<span class="pull-right"><a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>, tag, tag, tag, tag, tag, tag, tag, tag</span></div>
+
+            <h3><a href="">Article 2</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed molestie mauris, eu tristique libero.
+                Nunc hendrerit lacinia hendrerit. Donec luctus ultrices turpis sed eleifend.
+                <br><a href="">Read More ...</a></p>
+            <div class="art-summary">September 23, 2013 06:00 pm<span class="pull-right"><a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>, tag, tag, tag, tag, tag, tag, tag, tag</span></div>
+
+
+            <h3><a href="">Article 3</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed molestie mauris, eu tristique libero.
+                Nunc hendrerit lacinia hendrerit. Donec luctus ultrices turpis sed eleifend.
+                <br><a href="">Read More ...</a></p>
+            <div class="art-summary">September 23, 2013 06:00 pm<span class="pull-right"><a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>, tag, tag, tag, tag, tag, tag, tag, tag</span></div>
+
+
+            <h3><a href="">REALLY LONG LONG LONG LONG LONG LONG LONG LONG LONG TITLE</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed molestie mauris, eu tristique libero.
+                Nunc hendrerit lacinia hendrerit. Donec luctus ultrices turpis sed eleifend.
+                <br><a href="">Read More ...</a></p>
+            <div class="art-summary">September 23, 2013 06:00 pm<span class="pull-right"><a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>, tag, tag, tag, tag, tag, tag, tag, tag</span></div>
+
+
+        </div>
+        <div class="col-md-4">
+            <a class="twitter-timeline" href="https://twitter.com/cythrawll" data-widget-id="378309869377318912">Tweets by @cythrawll</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+
+
+    </div>
+    <div class="row" id="bottom">
+        <p class="col-md-6">
+            <span class="black">Chad Minick</span> | Software Developer<br>
+            <a href="https://twitter.com/cythrawll">Twitter</a> | <a href="https://github.com/cythrawll/">Github</a> | <a href="https://www.linkedin.com/in/cythrawll">LinkedIn</a>
+        </p>
+        <div class="pull-right">
+            <a class="feed" href="">RSS Feed</a>
+        </div>
+    </div>
+
 </div>
+<footer id="copy">
+    COPYRIGHT &copy 2014 CHAD MINICK | ALL RIGHTS RESERVED
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

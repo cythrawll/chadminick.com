@@ -1,0 +1,221 @@
+@background: #676c6b;
+@topbar: #77bc20;
+@screen-sm: 992px;
+@gray-font: #999;
+@gray-lines: #DCDCDC;
+@gray-background: #f1f1f1;
+
+.sans {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.mono {
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+.serif {
+  font-family: 'Droid Serif', serif;
+}
+
+body {
+  background-color: @background;
+}
+
+.header-align {
+  vertical-align: middle;
+  line-height: 50px;
+  height: 50px;
+}
+
+header {
+  height: 50px;
+  padding-left: 20px;
+  @media (max-width: @screen-sm) {
+    padding-left: 0px;
+  }
+  @media (max-width: @screen-sm) {
+    padding-left: 0px;
+  }
+}
+
+.container {
+  max-width: 960px;
+  min-width: 500px;
+  background-color: white;
+  margin-top: 25px;
+  padding: 20px 50px;
+  border-top: 7px solid @topbar;
+  .serif;
+}
+
+#main-nav {
+  height: 50px;
+  @media (max-width: @screen-sm) {
+    height: 20px;
+  }
+  min-width: 265px;
+}
+
+#main-nav ul {
+  float: left !important;
+  @media (min-width: @screen-sm) {
+    float: right !important;
+  }
+  position: relative;
+  top: 50%;
+  margin-top: -10px;
+}
+
+#brand {
+  font-size: 2.3em;
+  color: black;
+  text-shadow: 0.05em 0.05em 0.1em @gray-lines;
+  border-right: 1px solid @gray-lines;
+  margin: 0px;
+  display: inline-block;
+  padding-right: 15px;
+  float: left;
+  margin-bottom: 15px;
+  .header-align;
+  .sans;
+}
+
+#sub-brand {
+  font-size: 1em;
+  color: @gray-font;
+  padding-left: 15px;
+  margin-top: 0.1em;
+  float: left;
+  //.serif;
+  .header-align;
+}
+
+.nav>li>a {
+  background-color: white;
+  color: black;
+  .serif
+}
+
+.nav-pills>li {
+  margin-right: 8px;
+}
+
+.nav-pills>li>a {
+  border: @gray-lines solid 1px;
+  border-radius: 0px;
+}
+
+.nav>li>a {
+  padding: 1px 5px;
+}
+
+.nav-pills>li>a:hover, .nav-pills>li>a:focus {
+  background-color: @topbar;
+  color: white;
+}
+
+h2 {
+  font-size: 1.7em;
+  color: @gray-font;
+  .serif
+}
+
+h3 {
+  font-size: 1.4em;
+  .sans
+}
+
+h3>a, h3>a:hover, h3>a:focus, h3>a:visited {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.art-summary {
+  font-size: 0.8em;
+}
+.black {
+  color: black;
+}
+
+#copy {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  .sans
+}
+
+.sicons:hover, .sicons:focus {
+  background-color: white !important;
+}
+
+.sicons {
+  border: 0px !important;
+  padding: 0px !important;
+  background-image: url('../images/social-sprites.png');
+  background-repeat: no-repeat;
+  display: block !important;
+  height: 25px;
+  font-size: 0px;
+  text-indent: -9000px;
+}
+
+.sicon-twitter {
+  width: 31px;
+  margin-left: 15px;
+}
+
+.sicon-github {
+  width: 25px;
+  background-position: -33px;
+}
+
+.sicon-linkedin {
+  width: 26px;
+  background-position: -59px;
+}
+
+#info-row {
+  background-color: @gray-background;
+  border-top: 1px solid @gray-lines;
+  border-bottom: 1px solid @gray-lines;
+  @media(max-width: @screen-sm) {
+    margin-top: 20px;
+  }
+}
+
+#info-row p {
+  font-size: 0.7em;
+  margin-bottom: 20px;
+}
+
+#info-row h2 {
+  font-size: 1.2em;
+  color: black;
+}
+
+.index-article-col {
+  border-right : 1px solid @gray-lines;
+  padding-right: 30px;
+}
+.twitter-timeline {
+  margin-top: 30px;
+}
+
+a:hover, a:focus {
+  color: @topbar;
+}
+
+#bottom {
+  border-top: 1px solid @gray-lines;
+  color: @gray-font;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.feed {
+  margin-left: 3px;
+  padding: 0 0 0 19px;
+  background: url("../images/feed-icon-14x14.png") no-repeat 0 50%;
+}
