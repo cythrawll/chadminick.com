@@ -1,0 +1,20 @@
+---
+layout: page
+status: publish
+published: true
+title: About
+author: Chad Emrys Minick
+author_login: admin
+author_email: cythrawll@codeangel.org
+author_url: http://
+wordpress_id: 2
+wordpress_url: http://wp.localhost/?page_id=2
+date: '2009-01-21 22:41:31 -0500'
+date_gmt: '2009-01-22 04:41:31 -0500'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p>Chad Emrys Minick is a Software Developer with an A.A.S. in Information Technology - Web Technologies. Chad also has 6 years of technical experience in the Army National Guard. Chad loves Programming, Video Games (espeically World of Warcraft), and Movies.</p>
+<p>Chad is currently working as a Software Developer at Wolfram Research, Inc.</p>

@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: I'm Back
+author: Chad Emrys Minick
+author_login: admin
+author_email: cythrawll@codeangel.org
+author_url: http://
+wordpress_id: 3
+wordpress_url: http://codeangel.org/?p=3
+date: '2009-01-22 20:52:37 -0500'
+date_gmt: '2009-01-23 02:52:37 -0500'
+categories:
+- Codeangel
+tags:
+- Servers
+- PHP
+- Codeangel
+- WoW
+comments: []
+---
+<p>Hello readers</p>
+<p>As you can see, I have a completely different blog.  I have started over from scratch.  I will probably be reposting some of my old articles here.  If you have any articles you would like to see reposted, send a comment to this Post.</p>
+<p>So what happened to CodeAngel? why is it on this crappy wp blog with this crappy generic wp theme?  Well I happen to like the theme.  Codeangel blog was project I mainly picked up to learn some things, and it served that purpose.  I did have aspirations to release it someday, but I got too busy to finish it to the point where it was reasonable to release.  Plus my interests have drifted from PHP web development to other platforms.  Maybe one of these days I'll write a Java Blog.</p>
+<p>Codeangel was down for a long time due to hardware problems on my server.  I used to have my personal server hosted by a good friend of mine (<a href="http://www.midwestfirst.com">SHOUTOUT TO MIDWEST FIRST, INC!</a>).  But I moved away from the area, and after a string of hardware issues and not having time to travel all the way down there to fix the problems, I decided it was no longer worth having it there.  So now the huge ol'biddy of a server is with me, maybe I'll fix it up to be my own personal file server, or maybe empty out the case and use it as a bathtub. </p>
+<p>It's nice having CodeAngel back, and I'll try to post some other things besides boring ol' Programming articles and get more personal. Maybe we'll even see some WoW stuff here. We'll see how this goes.</p>
