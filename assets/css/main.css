@@ -140,7 +140,7 @@ h3 > a:visited {
 .sicons {
   border: 0px !important;
   padding: 0px !important;
-  background-image: url('../images/social-sprites.png');
+  background-image: url('/assets/images/social-sprites.png');
   background-repeat: no-repeat;
   display: block !important;
   height: 25px;
@@ -197,5 +197,5 @@ a:focus {
 .feed {
   margin-left: 3px;
   padding: 0 0 0 19px;
-  background: url("../images/feed-icon-14x14.png") no-repeat 0 50%;
+  background: url("/assets/images/feed-icon-14x14.png") no-repeat 0 50%;
 }

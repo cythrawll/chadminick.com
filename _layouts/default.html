@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+    <meta charset="utf8">
+    <title>{{page.title}} &mdash; Chad Minick | Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans%7CDroid+Sans+Mono%7CDroid+Serif">
+    <!-- Main.css -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- syntax.css -->
+    <link rel="stylesheet" href="/assets/css/syntax.css">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <header>
+                <h1 id="brand">Chad Minick</h1>
+                <div id="sub-brand">Software Developer</div>
+            </header>
+        </div>
+        <nav class="col-md-4 col-sm-12 col-xs-12" id="main-nav">
+            <ul class="nav nav-pills">
+                <li><a href="/">Home</a></li>
+                <li><a href="/archive.html">Archive</a></li>
+                <li><a class="sicons sicon-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter" href="https://twitter.com/cythrawll">Twitter</a></li>
+                <li><a class="sicons sicon-github" data-toggle="tooltip" data-placement="bottom" title="Github" href="https://github.com/cythrawll/">Github</a></li>
+                <li><a class="sicons sicon-linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn" href="https://www.linkedin.com/in/cythrawll">LinkedIn</a></li>
+            </ul>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+        </nav>
+    </div>
 
           {{ content }}
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+    <div class="row" id="bottom">
+        <p class="col-md-6">
+            <span class="black">Chad Minick</span> | Software Developer<br>
+            <a href="https://twitter.com/cythrawll">Twitter</a> | <a href="https://github.com/cythrawll/">Github</a> | <a href="https://www.linkedin.com/in/cythrawll">LinkedIn</a>
+        </p>
+        <div class="pull-right">
+            <a class="feed" href="">RSS Feed</a>
         </div>
+    </div>
 
-    </body>
+</div>
+<footer id="copy">
+    COPYRIGHT &copy; 2014 CHAD MINICK | ALL RIGHTS RESERVED
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>

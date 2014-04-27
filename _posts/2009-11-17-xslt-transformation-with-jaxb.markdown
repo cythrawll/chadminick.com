@@ -97,7 +97,8 @@ comments:
     my post!"
 ---
 <p>The goal here is to take the output of a JAXB Marshaller and pass it straight to an xslt processor like JAXP.  The issue with this is that JAXP takes it's input from various sorts of input streams and JAXB marshaller outputs usually in some sort of output stream.  I saw some (bad) solutions about changing an output stream into an input stream and then pass it to JAXP.  eww.  The cool thing about JAXB is that it can marshall into a SAX <a href ="http://java.sun.com/webservices/docs/1.6/api/org/xml/sax/ContentHandler.html">ContentHandler</a>. And there is an implementation of ContentHandler that handles XSL transformations for us! Here is an example of a http servlet that will do an xslt transformation on a JAXB marshalled POJO and dump the results right into into the servlet's output stream:</p>
-<pre lang="java">
+
+{% highlight java linenos %}
 package org.codeangel.awesome;
 
 import java.io.IOException;
@@ -179,5 +180,5 @@ public class DisplayServlet extends HttpServlet {
     }
   }
 }
-</pre>
+{% endhighlight %}
 <p>Edit: as Jesper has pointed out, you really should only create one JaxBContext, as it's pretty heavy.  I moved the creation to a static block for simplification... You could also use a singleton pattern here as well.</p>
