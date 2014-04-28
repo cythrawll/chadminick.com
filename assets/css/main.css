@@ -199,3 +199,6 @@ a:focus {
   padding: 0 0 0 19px;
   background: url("/assets/images/feed-icon-14x14.png") no-repeat 0 50%;
 }
+kbd {
+  white-space: nowrap;
+}

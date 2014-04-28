@@ -14,7 +14,10 @@ date_gmt: '2013-01-08 01:00:44 -0500'
 categories:
 - Coding
 - PHP
-tags: []
+tags:
+- PHP
+- Coding
+- Functional Programming
 comments:
 - id: 10433
   author: 'CodeAngel.org &raquo; Option Pattern and avoiding Nulls pt. 2: Method Chaining'
@@ -40,21 +43,27 @@ comments:
   date_gmt: '2013-07-11 18:58:24 -0400'
   content: try catch
 ---
-<p>In <a href="http://codeangel.org/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a> I introduced the Option pattern as a pattern to avoid using nulls.  In <a href="http://codeangel.org/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a> I showed an example of how this can be handy in method chaining. In this part I'll introduce how to use Option for request variables.</p>
-<p>Request variables are supplied by the user. You can't rely on them to be there all the time. Something as simple as <tt>echo $_GET['search']</tt> throws something like this:</p>
+<p>In <a href="/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a> I introduced the Option pattern as a pattern to avoid using nulls.  In <a href="/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a> I showed an example of how this can be handy in method chaining. In this part I'll introduce how to use Option for request variables.</p>
+
+<p>Request variables are supplied by the user. You can't rely on them to be there all the time. Something as simple as <kbd>echo $_GET['search']</kbd> throws something like this:</p>
 <pre>
 PHP Notice:  Undefined index: search in ...
 </pre>
 <p>Doing naive echos like that can really fill your logs on a server quick. You can either turn Notices off (which you shouldn't), or you can find another safe way to get request variables.  Here is an approach that works.</p>
-<pre lang="php">
+
+{% highlight php startinline %}
   echo isset($_GET['term']) ? $_GET['term'] : 'default';
-</pre>
-<p>Having to repeat <tt>$_GET['term']</tt> twice is extremely ugly. In php 5.3, we have a short ternary like ?:, however that will not suppress the Notice, <tt>isset()</tt> is needed.  This is another case where Option pattern can help.</p>
-<pre lang="php">
+{% endhighlight %}
+
+<p>Having to repeat <kbd>$_GET['term']</kbd> twice is extremely ugly. In php 5.3, we have a short ternary like <kbd>?</kbd>:, however that will not suppress the Notice, <kbd>isset()</kbd> is needed.  This is another case where Option pattern can help.</p>
+
+{% highlight php startinline %}
   echo Option::create($_GET['term'])->getOrElse('default');
-</pre>
+{% endhighlight %}
+
 <p>Much easier to read and flows much better.  But since this is a very common use case to use Option for request variables, in my implementation I made a few static helpers.</p>
-<pre lang="php">
+
+{% highlight php startinline %}
   echo Option::_get('term')->getOrElse('default');
   echo Option::_post('username')->getOrElse('anonymous');
   
@@ -70,16 +79,19 @@ PHP Notice:  Undefined index: search in ...
 
   //Don't forget you can map too!
   echo Option::_get('term')->map('htmlentities');
-</pre>
-<p>You can use Option during your form validation as well!  Remember <tt>isEmpty()</tt> and <tt>isDefined()</tt> only care if the value is defined or not null. Empty strings, false and empty arrays are considered values here.  I added another method <tt>hasLength()</tt> which returns false if the value <tt>isEmpty()</tt>, empty array, empty string.  Personally I never agreed things like 0, false, '0' in php's <tt>empty</tt> function should return true on empty.</p>
-<pre lang="php">
+{% endhighlight %}
+
+<p>You can use Option during your form validation as well!  Remember <kbd>isEmpty()</kbd> and <kbd>isDefined()</kbd> only care if the value is defined or not null. Empty strings, false and empty arrays are considered values here.  I added another method <kbd>hasLength()</kbd> which returns false if the value <kbd>isEmpty()</kbd>, empty array, empty string.  Personally I never agreed things like 0, false, '0' in php's <kbd>empty</kbd> function should return true on empty.</p>
+
+{% highlight php startinline %}
   $term = Option::_get('term');
   if($term->hasLength()) {
     //use it!
   } 
-</pre>
+{% endhighlight %}
+
 <p>I hope you find this Option pattern useful! Happy coding!</p>
 <h4>Links</h4>
 <p>Option github poject: <a href="https://github.com/cythrawll/Option" target="_blank">https://github.com/cythrawll/Option</a><br />
-<a href="http://codeangel.org/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a><br />
-<a href="http://codeangel.org/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a></p>
+<a href="/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a><br />
+<a href="/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a></p>
