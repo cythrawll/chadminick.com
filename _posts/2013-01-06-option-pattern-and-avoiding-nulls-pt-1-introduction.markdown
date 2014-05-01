@@ -71,14 +71,14 @@ $option->isDefined(); //returns true!
 echo $option->get();
 {% endhighlight %}
 
-<p>This will work if $option has a value, however if it's empty, it will throw an Exception!  So you should avoid using get() yourself unless you test it first with <tt>isEmpty()</tt> or <tt>isDefined()</tt>.</p>
+<p>This will work if $option has a value, however if it's empty, it will throw an Exception!  So you should avoid using get() yourself unless you test it first with <kbd>isEmpty()</kbd> or <kbd>isDefined()</kbd>.</p>
 <p>Probably the most used method here is <kbd>getOrElse</kbd>. This allows you to pass a default in case there is no value:</p>
 
 {% highlight php startinline %}
 echo $option->getOrElse("default");
 {% endhighlight %}
 
-<p>Sometimes you might need to pass something you're carrying around as an <tt>Option</tt> as a null, because that's what a function you are using expects!  PHP sometimes wants a null when you mean nothing. <kbd>getOrNull()</kbd> helps with that.</p>
+<p>Sometimes you might need to pass something you're carrying around as an <kbd>Option</kbd> as a null, because that's what a function you are using expects!  PHP sometimes wants a null when you mean nothing. <kbd>getOrNull()</kbd> helps with that.</p>
 
 {% highlight php startinline %}
 functionThatMightNeedNull($option->getOrNull());

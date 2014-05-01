@@ -77,7 +77,7 @@ function isPass($student, $course) {
 
 <p>That is UGLY, but it's safe.  We avoid the dangers of chaining.</p>
 <p>Another approach to keep the method chaining is instead of returning null or false, you return an object of say Student or Course. However, you come up with a way to represent these objects as an empty instance, so they keep the same expectations within a method chain.  </p>
-<p>The other way is to use <tt>Option</tt></p>
+<p>The other way is to use <kbd>Option</kbd></p>
 <p>Instead of having your methods return null, false, or some odd class instance that represents an empty Student or Course,  make each method return an Option type.</p>
 
 {% highlight php startinline %}
@@ -110,7 +110,7 @@ function isPass($student, $course) {
 }
 {% endhighlight %}
 
-<p>This may not be as pretty as the first chaining method we had before, but it's safe, and it avoids a lot of sanity checks.  Yet another appraoch I should mention, make your own specific class that is similar to <tt>Option</tt> with no methods but __call, and use magic methods to do what map() does.  In my personal opinion, however, that's too much implicit magic going on. I like to make it obvious what the methods return, and I still think the Option pattern may not be as brief as that approach. This is much cleaner as it's more obvious what is going on. I'll leave it up to the reader to decide.</p>
+<p>This may not be as pretty as the first chaining method we had before, but it's safe, and it avoids a lot of sanity checks.  Yet another appraoch I should mention, make your own specific class that is similar to <kbd>Option</kbd> with no methods but __call, and use magic methods to do what map() does.  In my personal opinion, however, that's too much implicit magic going on. I like to make it obvious what the methods return, and I still think the Option pattern may not be as brief as that approach. This is much cleaner as it's more obvious what is going on. I'll leave it up to the reader to decide.</p>
 
 <p>In part 3 I'll talk about request variables and Option patterns.</p>
 
