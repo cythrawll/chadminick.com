@@ -13,7 +13,8 @@ date: '2011-07-11 09:57:50 -0400'
 date_gmt: '2011-07-11 15:57:50 -0400'
 categories:
 - Uncategorized
-tags: []
+tags:
+- Quotes
 comments: []
 ---
-<p>If you believe in miracles or not, you have to acknowledge one of the biggest miracles is giving mankind the drive to implement our imaginations and dreams through art and technology.</p>
+If you believe in miracles or not, you have to acknowledge one of the biggest miracles is giving mankind the drive to implement our imaginations and dreams through art and technology.

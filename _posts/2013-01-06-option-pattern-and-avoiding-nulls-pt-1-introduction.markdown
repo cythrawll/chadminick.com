@@ -14,7 +14,10 @@ date_gmt: '2013-01-07 03:22:17 -0500'
 categories:
 - Coding
 - PHP
-tags: []
+tags:
+- PHP
+- Coding
+- Functional Programming
 comments:
 - id: 10416
   author: 'CodeAngel.org &raquo; Option Pattern and avoiding Nulls pt. 2: Method Chaining'

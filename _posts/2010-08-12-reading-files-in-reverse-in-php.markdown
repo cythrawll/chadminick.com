@@ -14,7 +14,9 @@ date_gmt: '2010-08-12 13:05:35 -0400'
 categories:
 - Coding
 - PHP
-tags: []
+tags:
+- PHP
+- Coding
 comments:
 - id: 11564
   author: ''
@@ -43,10 +45,14 @@ comments:
     what I meant was is it possible to print the contents without using the foreach
     loop?\r\n\r\nThanks,\r\nMurali"
 ---
-<p>Every once in awhile I get someone asking me in ##php on freenode how to prepend entries to a file.  Usually it's because it's a log file of some sort and they want to read the latest entries first. This is usually for someone (not necessarily the developer) who isn't used to the whole habit of reading log files from the bottom up.  Years of using <em>tail</em> to read log files has lead me to have different expectations than a typical Joe (not you, Chance), and wanting new entries first is a reasonable request.  However, one has to remember that viewing data and storing data are two completely different things. The most efficient way to view data isn't always the most efficient way to store it.</p>
+Every once in awhile I get someone asking me in ##php on freenode how to prepend entries to a file.  Usually it's because it's a log file of some sort and they want to read the latest entries first. This is usually for someone (not necessarily the developer) who isn't used to the whole habit of reading log files from the bottom up.  Years of using <em>tail</em> to read log files has lead me to have different expectations than a typical Joe (not you, Chance), and wanting new entries first is a reasonable request.  However, one has to remember that viewing data and storing data are two completely different things. The most efficient way to view data isn't always the most efficient way to store it.
+
+<!--MORE-->
+
 <p>Prepending data to a file isn't that easy, hence, why log files traditionally are appended to. There really is no safe way to do it in PHP. I kind of doubt there are safe ways to do it in any language that will handle concurrent operations well. It's far easier to append data to your file, then read it backwards.  I've seen some pretty awful solutions to this problem in PHP, mostly involving reading the whole file in memory using <em>file()</em> and then calling <em>array_reverse()</em> on the result. Fortunately, PHP's SPL makes reading a file in reverse pretty easy without loading the whole file into memory at once.  Here is the class:</p>
-<pre lang="php">
-< ?php
+
+{% highlight php %}
+<?php
 class ReverseFileReader extends SplFileObject {
   private $lineCount;
   private $loc;
@@ -81,11 +87,13 @@ class ReverseFileReader extends SplFileObject {
      $this->loc = $this->lineCount;
   }
 }
-</pre>
+{% endhighlight %}
+
 <p>Once you have this class in your toolbox, using it is pretty easy:</p>
-<pre lang="php">
+
+{% highlight php startinline %}
 $file = new ReverseFileReader('somefile.log');
 foreach($file as $line) {
   echo $line;
 }
-</pre>
+{% endhighlight %}

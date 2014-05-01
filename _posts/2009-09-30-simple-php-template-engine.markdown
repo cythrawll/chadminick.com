@@ -29,6 +29,9 @@ categories:
 - PHP
 tags:
 - PHP
+- Templating
+- HTML
+- Coding
 comments:
 - id: 81
   author: Daniel Campbell
@@ -346,8 +349,12 @@ comments:
   content: "[...] P.P.S. For how to implement pure php templates, read this article.
     [...]"
 ---
-<h2>PHP for templating?</h2>
-<p>PHP is a bit of a rare language as it can already template into text in markup with zero modifications or libraries.  It is probably one of the big contributing factors why PHP is one of the most popular languages on the web today.  (Can't be the only factor, it didn't work for ColdFusion)  Most other web languages have a one or more templating languages with a different syntax that need to be learned on top of the implementing language.  PHP lowers the bar to entry by allowing you to put your PHP code right into your html.  But as we all know, sometime in your PHP tour, you will realize the need to separate presentation logic and the application logic.  Some developers go running to some other solution that provides a different syntax.  I am a bit puzzled on why this seems to be common practice, PHP can provide the same features without throwing another template syntax on top of what PHP already does.  You can still achieve the separation needed with a simple class (shown at the end of this article).</p>
+<h3>PHP for templating?</h3>
+
+PHP is a bit of a rare language as it can already template into text in markup with zero modifications or libraries.  It is probably one of the big contributing factors why PHP is one of the most popular languages on the web today.  (Can't be the only factor, it didn't work for ColdFusion)  Most other web languages have a one or more templating languages with a different syntax that need to be learned on top of the implementing language.  PHP lowers the bar to entry by allowing you to put your PHP code right into your html.  But as we all know, sometime in your PHP tour, you will realize the need to separate presentation logic and the application logic.  Some developers go running to some other solution that provides a different syntax.  I am a bit puzzled on why this seems to be common practice, PHP can provide the same features without throwing another template syntax on top of what PHP already does.  You can still achieve the separation needed with a simple class (shown at the end of this article).
+
+<!--MORE-->
+
 <p>I mainly see two solutions that people tend to use over PHP.  One solution is to use a premade template engine like Smarty on top of PHP.  The other is to use string replacement techniques on a template file.</p>
 <h3>String replacement... sucks</h3>
 <p>If you wrote your own template engine most likely using a <i>str_replace</i> or perhaps <i>preg_replace</i> to implement the embedding of dynamic parts of the code.  There are two problems with this:  One, it's slow;  Secondly it's difficult to implement all the features needed to provide a robust templating language.  Things like formatting functions, control structures etc are a bit clumsy to add to a solution like this.  The other option is to implement very simple variable replacement, and then doing your formatting functions, control structures, etc. in your controller and just assign the result to variable replacement, however, that is completely against the point of having a template engine. The separation of presentation logic and app logic gets pretty blurry when you do some of the presentation logic outside of the template.</p>
@@ -376,8 +383,9 @@ comments:
 <h4>I don't like PHP</h4>
 <p>Me either, that's why I work with Java and JSP.</p>
 <h2>The Code:</h2>
-<pre lang="php">
-< ?php
+
+{%  highlight php %}
+<?php
 class Template {
   private $vars  = array();
 
@@ -402,35 +410,41 @@ class Template {
     return ob_get_clean();
   }
 }
-</pre>
+{% endhighlight %}
+
 <p>Usage:</p>
 <p>main.php template:</p>
-<pre lang="php">
+
+{% highlight html+php %}
 <html>
 <head>
-  <title>< ?php echo $title; ?></title>
+    <title><?php echo $title; ?></title>
 </head>
 <body>
-<h1>< ?php echo $title; ?></h1>
-<div>
-< ?php echo $content; ?>
-</div>
+    <h1><?php echo $title; ?></h1>
+    <div>
+        <?php echo $content; ?>
+    </div>
 </body>
 </html>
-</pre>
+{% endhighlight %}
+
 <p>content.php:</p>
-<pre lang="php">
+
+{% highlight html+php %}
 <ul>
-< ?php foreach($links as $link): ?>
-<li>< ?php echo $link; ?></li>
-< ?php endforeach; ?>
+    <?php foreach($links as $link): ?>
+        <li><?php echo $link; ?></li>
+    <?php endforeach; ?>
 </ul>
 <div>
-< ?php echo $body; ?>
+    <?php echo $body; ?>
 </div>
-</pre>
+{% endhighlight %}
+
 <p>controller.php:</p>
-<pre lang="php">
+
+{% highlight php startinline %}
 $view = new Template();
 
 $view->title = "hello, world";
@@ -439,7 +453,8 @@ $view->body = "Hi, sup";
 
 $view->content = $view->render('content.php');
 echo $view->render('main.php');
-</pre>
+{% endhighlight %}
+
 <h3>Other PHP templating solutions you may want to check out</h3>
 <p><a href="http://phpsavant.com/">PHP Savant</a><br />
 <a href="http://framework.zend.com/manual/en/zend.view.html">Zend View, Part of the Zend Framework</a></p>

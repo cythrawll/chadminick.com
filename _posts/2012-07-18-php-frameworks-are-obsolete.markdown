@@ -13,7 +13,12 @@ date: '2012-07-18 19:19:14 -0400'
 date_gmt: '2012-07-19 01:19:14 -0400'
 categories:
 - Uncategorized
-tags: []
+tags:
+- PHP
+- Frameworks
+- Scala
+- Java
+- Play Framework
 comments:
 - id: 7742
   author: PHP frameworks are obsolete | hakre on wordpress
@@ -385,7 +390,10 @@ comments:
 
     If you are the kind of person that can get away with using PHP as a simple skin on top of a database, than this article wasn't for you, and I made I thought I made that clear in the article.
 ---
-<p>As a person who works with the PHP support community quite a bit, I'm often asked "What PHP framework do you recommend?". I answer this as honestly as I can: "None of them". It does pain me to say this, but as someone who's been to the other side, and not only seeing that the grass is greener, it's like <span style="color: #009000;">REALLY FREAKING GREEN</span>. Now before I start getting hate mail, let me explain that I still think there is a market for PHP frameworks.  I think if you have a moderately low traffic site that's going to live on shared hosting, and is basically a CRUD application on top of MySQL, disregard this article, it probably isn't for you. However, I've seen so many projects start out with that scope. They either grow or the developer/client wants to add more fancy new features they are starting to see elsewhere on the web. Then I see all these PHP developers hacking things that the PHP stack really isn't meant to do. Of course there are add-on systems you can put on your stack to tackle these problems but they don't have full control over the systems and people seem to be reluctant to add a new system if they could JUST hack this ONE thing into their web app (that will summarily destroy their throughput of their web server). I will go over these add-on systems in a bit.</p>
+As a person who works with the PHP support community quite a bit, I'm often asked "What PHP framework do you recommend?". I answer this as honestly as I can: "None of them". It does pain me to say this, but as someone who's been to the other side, and not only seeing that the grass is greener, it's like <span style="color: #009000;">REALLY FREAKING GREEN</span>. Now before I start getting hate mail, let me explain that I still think there is a market for PHP frameworks.  I think if you have a moderately low traffic site that's going to live on shared hosting, and is basically a CRUD application on top of MySQL, disregard this article, it probably isn't for you. However, I've seen so many projects start out with that scope. They either grow or the developer/client wants to add more fancy new features they are starting to see elsewhere on the web. Then I see all these PHP developers hacking things that the PHP stack really isn't meant to do. Of course there are add-on systems you can put on your stack to tackle these problems but they don't have full control over the systems and people seem to be reluctant to add a new system if they could JUST hack this ONE thing into their web app (that will summarily destroy their throughput of their web server). I will go over these add-on systems in a bit.
+
+<!--MORE-->
+
 <p>The other thing that bothers me is that PHP frameworks are stuck in a rut. They seem to be pushing the same marketing that they've been pushing for years arguing over who has the most "lightweight" framework and claiming to be "fast" and other completely useless metrics like who can do web MVC the best. I feel "lightweight" is a completely useless metric, "Fast" is completely subjective especially since these days the greatest optimizations are done on the client and developers still don't know how to do JOIN SQL queries or how to index their databases correctly... When comparing those things to the speed of how fast a controller can be called, speed of the framework is just not that important or impressive. As for who can do MVC the best, that topic is tired and old.  I think it's a solved problem now. How about exploring different architectural patterns? Really what I'd like to see (besides the features I am going to mention after this paragraph) is to see frameworks start to advertise, for example, how loosely coupled they are.</p>
 <p>So what makes a good framework then? Let me list all the things that are being used to make a well put together modern professional web application, and summarily the add-ons to the PHP stack that are needed to tackle each. Note: not all of these are required but they will sneak in the more the project grows.</p>
 <ul>

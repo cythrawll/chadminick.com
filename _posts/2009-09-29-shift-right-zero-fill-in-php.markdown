@@ -17,9 +17,10 @@ tags:
 - PHP
 comments: []
 ---
-<p>I found this on the internet, might come in handy.</p>
-<pre lang="PHP">
-< ?php
+I found this on the internet, might come in handy.
+
+{% highlight php %}
+<?php
 function zeroFill($a, $b) 
 { 
     $z = hexdec(80000000); 
@@ -36,5 +37,6 @@ function zeroFill($a, $b)
         } 
         return $a; 
 } 
-</pre>
+{% endhighlight %}
+
 <p>credits to: Alex Stapleton, Andy Doctorow, Tarakan, Bill Zeller, Vijay "Cyberax" Bhatter, and traB.</p>

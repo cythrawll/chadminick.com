@@ -13,7 +13,8 @@ date: '2012-04-05 09:15:03 -0400'
 date_gmt: '2012-04-05 15:15:03 -0400'
 categories:
 - Uncategorized
-tags: []
+tags:
+- IRC
 comments: []
 ---
-<p>"/quote cap req :-identify-msg"  fixes this.</p>
+<pre>"/quote cap req :-identify-msg"</pre> fixes this.
