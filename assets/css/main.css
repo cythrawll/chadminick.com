@@ -79,6 +79,7 @@ header {
   padding-left: 15px;
   margin-top: 0.1em;
   float: left;
+  font-family: 'Droid Serif', serif;
   vertical-align: middle;
   line-height: 50px;
   height: 50px;
@@ -106,7 +107,7 @@ header {
 h2 {
   font-size: 1.7em;
   color: #999999;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Droid Sans', sans-serif;
 }
 h3 {
   font-size: 1.4em;
