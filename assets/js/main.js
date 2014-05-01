@@ -3,4 +3,5 @@
  */
 $(document).ready(function() {
     $(".sicons").tooltip();
+    $(".pager .disabled").click(function(e) { event.preventDefault(); return false });
 });
