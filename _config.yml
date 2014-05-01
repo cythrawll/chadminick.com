@@ -5,3 +5,5 @@ permalink: /articles/:title.html
 excerpt_separator: "<!--MORE-->"
 paginate: 5
 paginate_path: page/:num
+tag_page_layout: tag_page
+tag_page_dir: tag
