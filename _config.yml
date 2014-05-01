@@ -1,4 +1,6 @@
 name: Chad Minick | Software Developer
+description: "Blog for Chad Minick in which he discusses his interests, Computer Programming, Software Engineering, Web Development and more"
+url: http://chadminick.com/
 markdown: redcarpet
 pygments: true
 permalink: /articles/:title.html
