@@ -2,7 +2,7 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+<div class="post-summary"><span class="glyphicon glyphicon-time"></span>{{page.date | date: "%B %-d, %Y"}} <span class="comment-out"><span class="glyphicon glyphicon-comment"></span><a href="#disqus_thread">Comments</a></span><span class="pull-right tags"><span class="glyphicon glyphicon-tags"></span>{{page | tags}}</span></div>
 
 <div class="post">
 {{ content }}
