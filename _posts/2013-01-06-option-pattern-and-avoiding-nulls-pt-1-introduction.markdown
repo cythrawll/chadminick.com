@@ -43,7 +43,7 @@ I imagine in the PHP community, the idea of avoiding nulls in your code might be
 <p>Google apparently likes this idea and added it to their <a href="http://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained" title="Guava" target="_blank">Guava</a> library for Java.  I loved the pattern and now I've made one for PHP: <a href="https://github.com/cythrawll/Option" target="_blank">https://github.com/cythrawll/Option</a>.</p>
 <p>Option Pattern in PHP is less needed than in languages like Scala and Java who try to have a high degree of type safety. Null is a really difficult bugger when it comes to type safety, however, like I said, PHP has a few places where Option Pattern could come in handy.</p>
 <p>Here is some basic usage:</p>
-<p>Let's say you have a function that sometimes may return null, there is a static method <tt>create($arg)</tt> on Option that will create either a 'Some' or 'None' instance.</p>
+<p>Let's say you have a function that sometimes may return null, there is a static method <kbd>create($arg)</kbd> on Option that will create either a 'Some' or 'None' instance.</p>
 
 {% highlight php startinline %}
 $maybe = mightReturnNullOrSomething();
