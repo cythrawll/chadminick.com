@@ -201,4 +201,15 @@ a:focus {
 }
 kbd {
   white-space: nowrap;
+  background-color: #f1f1f1;
+  color: black;
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+pre {
+  font-family: 'Droid Sans Mono', sans-serif;
+  background-color: #f1f1f1;
+  border: 1px solid #dcdcdc;
+}
+.excerpt p {
+  margin-bottom: 0px;
 }

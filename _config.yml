@@ -2,3 +2,4 @@ name: Chad Minick | Software Developer
 markdown: redcarpet
 pygments: true
 permalink: /articles/:title.html
+excerpt_separator: "<!--MORE-->"

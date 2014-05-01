@@ -41,9 +41,11 @@ comments:
   author_url: http://www.codeangel.co.uk
   date: '2013-07-11 12:58:24 -0400'
   date_gmt: '2013-07-11 18:58:24 -0400'
-  content: try catch
+  content: "try catch"
 ---
-<p>In <a href="/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a> I introduced the Option pattern as a pattern to avoid using nulls.  In <a href="/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a> I showed an example of how this can be handy in method chaining. In this part I'll introduce how to use Option for request variables.</p>
+In <a href="/articles/option-pattern-and-avoiding-nulls-pt-1-introduction.html">Part 1</a> I introduced the Option pattern as a pattern to avoid using nulls.  In <a href="/articles/option-pattern-and-avoiding-nulls-pt-2-method-chaining.html">Part 2</a> I showed an example of how this can be handy in method chaining. In this part I'll introduce how to use Option for request variables.
+
+<!--MORE-->
 
 <p>Request variables are supplied by the user. You can't rely on them to be there all the time. Something as simple as <kbd>echo $_GET['search']</kbd> throws something like this:</p>
 <pre>
