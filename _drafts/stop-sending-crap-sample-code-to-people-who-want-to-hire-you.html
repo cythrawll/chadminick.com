@@ -1,0 +1,42 @@
+---
+layout: posts
+author: Chad Minick
+title: Stop sending crap sample code to people who want to hire you.
+tags:
+- Jobs
+- PHP
+- Java
+---
+One of the best tools I have as a manager when recruiting new candidates is sample code. You can do great in interviews, have the most shiniest resume, do well on coding tests. But nothing tells me more about you than sample code. I request it out of every candidate that catches my eye. However, there's one problem, people will send you some crappy code. They either don't know better, have no respect for their own code, or think it doesn't matter. Either way it means I no longer will consider you as a candidate.
+
+80% of sample code I see that comes across my desk of potential candidates are so bad I have to throw their resume away. Even though I am pretty desperate for developers, nothing gives me cold feet on hiring than bad sample code. If you are a developer looking for a job, I implore you, STOP and think about what you're sending in. Here are some tips:
+<h3>Do not sent code with obvious vulnerabilities</h3>
+I see this problem the most, and it's frustrating because it's a deal breaker. Seriously, if I see an obvious vulnerability in your code, your resume goes into the trash can. I look specifically for SQL Injection and XSS vectors in sample code. Nine times out of ten, there is a SQL vulnerability as clear as day. It's surprising how often I see it despite how easy it is to avoid these days with modern programming principles. Binding parameters with a modern database API such as PDO, JDBC, etc. is a requirement. Stay away from concatenating strings of SQL code with untrusted variables. Escape output so that untrusted data doesn't inject javascript into your page. Don't blindly put untrusted data into include and requires. Don't use weak password hashing techniques. I'll just leave this here:
+<a href="http://wiki.hashphp.org/Security" target="_blank">http://wiki.hashphp.org/Security</a>
+<h3>Do not use deprecated APIs</h3>
+Yes, I know we all worked with legacy applications, we have those as well. But I'm more interested in if you know current practices than old, as it drives us quicker out of legacy habits. PHP developers, that means don't send code with mysql_* or ereg functions. Java developers, I don't want to see @Deprecated annotated crossed-out-methods in my editor.
+<h3>Format your code legibly and consistently</h3>
+I don't care if you are one of those heathens that embraces Allman style indenting. As long as it's consistent and clean looking.
+<h3>Give sample code for the job you're applying for</h3>
+If you are applying for a PHP job, give us a PHP sample. Java devs, put in a java web app sample. etc.. Don't send me assembly. (Yes I've gotten assembly, lisp, C, prolog, you name it). Just because it was a cool project in college does not make it good sample code for employers. If you don't have sample code in the particular language, spend the evening just putting one together. It doesn't have to be huge or super complicated project, even if it's just a comment system with a simple login, it should be enough someone can knock out in an evening and plenty of code for what most employers need.
+<h3>Make it brief</h3>
+As I'm sure your super convoluted app is awesomely cool, and has every conceivable feature under the rainbow, I'm only gonna spend a few minutes pouring over the code. Less is more in this case. The more light it is, the more layers of the code I'd be able to inspect, and the more I'll get out of it.
+<h3>Adhere to good practices for your language</h3>
+You should be familiar with best practices in the language your sample code is written in. That means, again, I don't want to see mysql_* used in PHP code, I do want to see composer, namespacing, logging etc. In java I better not see java code in &lt;% blocks in your JSP for example, I also want to see logging, and clean separation of objects and correctly generated accessors. There's a lot of tools in languages that allow for code analysis such as findbugs, run your code through them and see what you get.
+
+<a href="http://www.phptherightway.com/" target="_blank">http://www.phptherightway.com/
+</a><a href="http://www.javapractices.com/home/HomeAction.do" target="_blank">http://www.javapractices.com/home/HomeAction.do</a>
+<h3>Document your code</h3>
+PHPdocs, javadocs, JSdocs, put the correct docblock comments on your code. Enough said.
+<h3>Include unit tests</h3>
+Have decent code coverage. Show you can write unit tests to cover all the odds and ends. Think of edge cases to test for. Make them pass.
+<h3>It should compile</h3>
+Enough said.
+<h3>Make it runnable</h3>
+This goes with the "Make it brief" and "Include Unit Tests". Include a README in the root of the project that shows how I can easily set it up and see it running. It should be easy. Get rid of crazy installation steps. Even if it's a library I want to be able to run the unit tests.
+<h3>HTML should validate</h3>
+Really it can be any HTML or XHTML spec in the rainbow, but your output should validate against some spec. You might want to check your personal site you sent me in your resume too. Don't forget CSS validation!
+<h3>Use Github</h3>
+Why are you sending me some rar full of code? Just send your Github link. Don't have a Github account? Get one, put all your sample projects on there. Put your just-for-funsies personal projects up there. While you're on Github submit a patch or two to your favorite projects.
+<h3>Last but not least, show me you have fun</h3>
+I want to see that you love web development and programming in general. I should somehow get the idea that you love this stuff. Have fun! We have the coolest job in the world to launch awesome applications that can be accessed on every and any platform all around the world!
