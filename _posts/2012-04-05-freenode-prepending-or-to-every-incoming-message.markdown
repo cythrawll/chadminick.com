@@ -17,4 +17,4 @@ tags:
 - IRC
 comments: []
 ---
-<pre>"/quote cap req :-identify-msg"</pre> fixes this.
+<kbd>"/quote cap req :-identify-msg"</kbd> fixes this.
