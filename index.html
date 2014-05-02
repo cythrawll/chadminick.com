@@ -26,6 +26,26 @@ title: Home
             <div class="excerpt">{{post.excerpt}}
             <a href="{{post.url}}">Read More ...</a></div>
             <div class="art-summary"><span class="glyphicon glyphicon-time"></span>{{post.date | date: "%B %-d, %Y"}} <span class="comment-out"><span class="glyphicon glyphicon-comment"></span><a href="{{post.url}}#disqus_thread">Comments</a></span><span class="pull-right tags"><span class="glyphicon glyphicon-tags"></span>{{post | tags}}</span></div>
+            {% if forloop.index == 1 %}
+            <!-- frontpage 1 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:50px"
+                 data-ad-client="ca-pub-1236585637607752"
+                 data-ad-slot="7644112827"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            {% endif %}
+            {% if forloop.index == 2 %}
+            <!-- frontpage 2 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:50px"
+                 data-ad-client="ca-pub-1236585637607752"
+                 data-ad-slot="1597579226"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            {% endif %}
             {% endfor %}
 
             {% if paginator.total_pages > 1 %}
@@ -45,12 +65,22 @@ title: Home
             {% endif %}
         </div>
         <div class="col-md-4">
+
             <a class="twitter-timeline" href="https://twitter.com/cythrawll" data-widget-id="378309869377318912">Tweets by @cythrawll</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
             <div id="tag-cloud">
                 {{ site | tag_cloud }}
             </div>
+
+            <!-- sidebar ad -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:250px;height:250px"
+                 data-ad-client="ca-pub-1236585637607752"
+                 data-ad-slot="7783713629"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
 
