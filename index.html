@@ -26,22 +26,25 @@ title: Home
             <div class="excerpt">{{post.excerpt}}
             <a href="{{post.url}}">Read More ...</a></div>
             <div class="art-summary"><span class="glyphicon glyphicon-time"></span>{{post.date | date: "%B %-d, %Y"}} <span class="comment-out"><span class="glyphicon glyphicon-comment"></span><a href="{{post.url}}#disqus_thread">Comments</a></span><span class="pull-right tags"><span class="glyphicon glyphicon-tags"></span>{{post | tags}}</span></div>
-            {% if forloop.index == 1 %}
-            <!-- frontpage 1 -->
+           {% if forloop.index == 1 %}
+            <!-- frontpage 1 responsive -->
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:320px;height:50px"
+                 style="display:block"
                  data-ad-client="ca-pub-1236585637607752"
-                 data-ad-slot="7644112827"></ins>
+                 data-ad-slot="9884398822"
+                 data-ad-format="auto"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
             {% endif %}
             {% if forloop.index == 2 %}
             <!-- frontpage 2 -->
+            <!-- frontpage 2 responsive -->
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:320px;height:50px"
+                 style="display:block"
                  data-ad-client="ca-pub-1236585637607752"
-                 data-ad-slot="1597579226"></ins>
+                 data-ad-slot="2361132027"
+                 data-ad-format="auto"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>

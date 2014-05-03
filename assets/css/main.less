@@ -42,8 +42,11 @@ header {
   max-width: 960px;
   background-color: white;
   margin-top: 25px;
-  padding: 20px 2.333%;
+  padding: 20px 30px;
   border-top: 7px solid @topbar;
+  @media(max-width: 430px) {
+    padding: 20px 15px;
+  }
   .serif;
 }
 
@@ -72,6 +75,9 @@ header {
   padding-right: 15px;
   float: left;
   margin-bottom: 15px;
+  @media(max-width: 435px) {
+    border-right: 0px;
+  }
   .header-align;
 }
 
@@ -81,6 +87,9 @@ header {
   padding-left: 15px;
   margin-top: 0.1em;
   float: left;
+  @media(max-width: 435px) {
+    display: none;
+  }
   .serif;
   .header-align;
 }
@@ -193,6 +202,10 @@ h3>a, h3>a:hover, h3>a:focus, h3>a:visited {
 .index-article-col {
   border-right : 1px solid @gray-lines;
   padding-right: 30px;
+  @media(max-width: @screen-sm) {
+    padding-right: 15px;
+    border-right: 0px;
+  }
 }
 .twitter-timeline {
   margin-top: 30px;
@@ -266,3 +279,5 @@ pre {
 }
 
 .post-summary { margin-bottom: 20px; }
+
+.adsbygoogle {overflow: hidden;}

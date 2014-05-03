@@ -33,9 +33,14 @@ header {
   max-width: 960px;
   background-color: white;
   margin-top: 25px;
-  padding: 20px 2.333%;
+  padding: 20px 30px;
   border-top: 7px solid #77bc20;
   font-family: 'Droid Serif', serif;
+}
+@media (max-width: 430px) {
+  .container {
+    padding: 20px 15px;
+  }
 }
 #main-nav {
   height: 50px;
@@ -68,6 +73,11 @@ header {
   line-height: 50px;
   height: 50px;
 }
+@media (max-width: 435px) {
+  #brand {
+    border-right: 0px;
+  }
+}
 #sub-brand {
   font-size: 1em;
   color: #999999;
@@ -78,6 +88,11 @@ header {
   vertical-align: middle;
   line-height: 50px;
   height: 50px;
+}
+@media (max-width: 435px) {
+  #sub-brand {
+    display: none;
+  }
 }
 .nav > li > a {
   background-color: white;
@@ -177,6 +192,12 @@ h3 > a:visited {
   border-right: 1px solid #dcdcdc;
   padding-right: 30px;
 }
+@media (max-width: 992px) {
+  .index-article-col {
+    padding-right: 15px;
+    border-right: 0px;
+  }
+}
 .twitter-timeline {
   margin-top: 30px;
 }
@@ -237,4 +258,7 @@ pre {
 }
 .post-summary {
   margin-bottom: 20px;
+}
+.adsbygoogle {
+  overflow: hidden;
 }
