@@ -227,9 +227,6 @@ pre {
   background-color: #f1f1f1;
   border: 1px solid #dcdcdc;
 }
-.excerpt p {
-  margin-bottom: 0px;
-}
 #tag-cloud {
   margin-top: 20px;
 }
@@ -261,4 +258,5 @@ pre {
 }
 .adsbygoogle {
   overflow: hidden;
+  margin: 15px 0px;
 }
